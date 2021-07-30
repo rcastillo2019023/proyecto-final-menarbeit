@@ -1,0 +1,47 @@
+<form>
+    <div class="logo-image">
+      <img src="../../../assets/img/registro.png" alt="Logo" title="Logo" width="115">
+    </div>
+    <br>
+    <h1 class="title">REGISTRO</h1>
+    <p class="subtitle">Llena todos los datos solicitados</p>
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="basic-addon1">@</span>
+      <input type="text" class="form-control" placeholder="Nombre" aria-label="Username" aria-describedby="basic-addon1">
+    </div>
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="basic-addon1">@</span>
+      <input type="text" class="form-control" placeholder="Apellido" aria-label="Username" aria-describedby="basic-addon1">
+    </div>
+    
+    <div class="input-group mb-3">
+      <input type="text" class="form-control" placeholder="Correo electronico" aria-label="Recipient's username" aria-describedby="basic-addon2">
+      <span class="input-group-text" id="basic-addon2">@example.com</span>
+    </div>
+      
+    <div class="input-group mb-3">
+      <span class="input-group-text">✺</span>
+      <input type="text" class="form-control" placeholder="Contraseña" aria-label="Username">
+      <span class="input-group-text">☏</span>
+      <input type="text" class="form-control" placeholder="Telefono" aria-label="Server">
+    </div>
+
+    <div class="input-group mb-3">
+      <span class="input-group-text">Oficios</span>
+      <select class="form-select" id="inputGroupSelect01">
+        
+        <option selected>Elije uno</option>
+        <option value="1">Carpintero</option>
+        <option value="2">Cerrajero</option>
+        <option value="3">Mecanico</option>
+      </select>
+    </div>    
+    <br>
+    <button type="button" routerLink="/login" class="button buttonBlue" >Registrarse
+      <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
+    </button>
+    <p>
+      Ya tienes una cuenta?<a routerLink="/login" routerLinkActive="active"> Haz clic aquí</a>
+    </p>
+  </form>
+

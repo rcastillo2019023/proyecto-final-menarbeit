@@ -1,0 +1,126 @@
+<div class="container">
+    <div class="row justify-content-md-center">
+      <div class="col col-lg-4">
+        <form>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Usuario</th>
+        <th scope="col">Email</th>
+        <th scope="col">rol</th>
+        <th scope="col">Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let usua of usuarios">
+        <td>{{ usua.user }}</td>
+        <td>{{ usua.email }}</td>
+        <td>{{ usua.rol }}</td>
+          <div class="btn-group" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-primary" 
+            data-bs-toggle="modal" data-bs-target="#modalEditarUsuario">Editar</button>
+            <button type="button" class="btn btn-primary" 
+            data-bs-toggle="modal" data-bs-target="#modalEliminarUsuario">Eliminar</button>
+            <button type="button" class="btn btn-primary"   >Ver Ligas</button>
+          </div>
+      </tr>
+      <button type="button" class="btn btn-primary" 
+            data-bs-toggle="modal" data-bs-target="#modalRegistrarAdmin">Crear Administrador</button>
+    </tbody>
+  </table>
+  </form>
+  </div>
+  </div>
+  </div>
+
+  <div class="centro" >
+    <div >
+    <table class="table" id="tablePDF" >
+  
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Usuario</th>
+          <th scope="col">Email</th>
+          <th scope="col">Rol</th>
+          <th scope="col">Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let us of usuarios">
+          <td>{{ us._id }}</td>
+          <td>{{ us.user }}</td>
+          <td>{{ us.email }}</td>
+          <td *ngIf="us.role == 0">Administrador</td>
+          <td *ngIf="us.role == 1">Usuario</td>
+          <td *ngIf="us.role == 1" class="none">
+  
+  
+  
+  
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <!-- Editar Usuario -->
+              <button title="Editar al Usuario" type="button" class="btn" data-bs-toggle="modal"
+              data-bs-target="#modalEditUser" ><i class="fas fa-edit"></i></button>
+              <!-- Ver detalles del usuario -->
+              <button title="Ver registros de Usuario" type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalViewUser">
+                <i class="fas fa-plus"></i></button>
+  
+              <!-- Eliminar Usuario -->
+              <button title="Eliminar Usuario" type="button" class="btn" data-bs-toggle="modal"
+              data-bs-target="#modalDeleteUser" ><i class="fas fa-trash-alt"></i></button>
+            </div>
+          </td>
+  
+          <td *ngIf="us.role == 0" class="none">
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <!-- Ver detalles del usuario -->
+              <button title="Ver registros de Usuario" type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalViewUser"
+             ><i class="fas fa-plus"></i></button>
+            </div>
+          </td>
+  
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <br><br><br>
+    <p class="descript">
+      Añadir usuarios como Administrador
+    </p>
+    <div class="login-form">
+      <div>
+        <img src="./assets/image/admin.png" alt="Admin-image" title="Logo" width="180">
+      </div>
+      <form class="form">
+        <div class="half">
+          <div class="group">
+            <input type="text" id="user" name="user" >
+            <label>Usuario</label>
+          </div>
+        </div>
+        <div class="half">
+          <div class="group">
+            <input type="text" id="email" name="email">
+            <label>Email</label>
+          </div>
+        </div>
+        <div class="half">
+          <div class="group">
+            <input type="password" id="password" name="password" >
+            <label>Contraseña</label>
+          </div>
+        </div>
+        <br>
+        <div class="almost-half">
+          <button type="button" class="button buttonBlue" >Añadir usuario
+            <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
+          </button>
+        </div>
+      </form>
+    </div>
+  
+    <div class="borde"></div>
+  
+  </div>
+  
